@@ -24,6 +24,10 @@ Just one job:
 
 	squeue -j 631978
 	
+With priority information (i.e. whose jobs should schedule next):
+
+	squeue -O jobid,name,username,priority,state
+	
 When can I expect my jobs to start:
 
 	squeue -u hartleym --start
