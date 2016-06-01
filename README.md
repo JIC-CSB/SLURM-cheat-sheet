@@ -46,11 +46,23 @@ all jobs:
 
 	sacct --format=JobID,JobName,MaxRSS,Elapsed
 
-## Fair shares information
+## Fair shares/scheduling information
 
 Show information about the fair shares for NBI users:
 
 	sshare -a -A nbi
+
+Just one person:
+
+	sshare -u hartleym
+
+See scheduler weights:
+
+	sprio -w
+	
+See a job's priority:
+
+	sprio -j 714141
 	
 ## Sreport
 
