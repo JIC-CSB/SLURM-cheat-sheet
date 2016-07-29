@@ -10,6 +10,16 @@ Stop everything going into the nbi-long partition:
 
 	unset SBATCH_PARTITION
 
+Submitting a job which depends upon the successful completion of another job. (Assuming a job is currently either running or in the queue with ID number 123)
+
+	sbatch --dependency=afterok:123 my_job_file.sh
+
+Submitting a job with multiple dependencies can be achieved using a colon to seperate job IDs. (The following example assumes two jobs which are running or in the queue with IDs 123 and 456)
+
+	sbatch --dependency=afterok:123:456 my_job_file.sh
+
+If you don't care about successful completion of a dependency in order to start the subsequent job, e.g. the dependency can fail with but you still want the next job to run afterwards, you can substitute `afterok` with `afterany`.
+
 ##Info on running/pending jobs
 
 Info in all running jobs:
