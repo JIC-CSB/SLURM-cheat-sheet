@@ -36,6 +36,16 @@ Detailed information about a pending/running job:
 
 	scontrol show jobid -dd 524552
 	
+### snodetop
+
+Show detailed information using atop about node on which a job is running:
+
+	snodetop -j 3455708
+	
+For a particular node:
+
+	snodetop -n n128n1
+	
 ##Information about completed jobs
 
 Show detailed information about a single job:
