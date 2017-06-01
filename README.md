@@ -1,6 +1,6 @@
 # SLURM cheat sheat
 
-##Submit a job
+## Submit a job
 
 Submission with sbatch:
 
@@ -20,7 +20,7 @@ Submitting a job with multiple dependencies can be achieved using a colon to sep
 
 If you don't care about successful completion of a dependency in order to start the subsequent job, e.g. the dependency can fail with but you still want the next job to run afterwards, you can substitute `afterok` with `afterany`.
 
-##Info on running/pending jobs
+## Info on running/pending jobs
 
 Info in all running jobs:
 
@@ -56,7 +56,7 @@ For a particular node:
 
 	snodetop -n n128n1
 	
-##Information about completed jobs
+## Information about completed jobs
 
 Show detailed information about a single job:
 
